@@ -1,0 +1,329 @@
+/* line 3, scss/furgon.sass */
+html {
+  margin: 0;
+}
+
+/* line 6, scss/furgon.sass */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 10, scss/furgon.sass */
+h1 {
+  text-transform: uppercase;
+  font-size: 100px;
+  margin: 0;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+/* line 16, scss/furgon.sass */
+h1 span {
+  color: #f8d902;
+  font-weight: 800;
+  display: inline-block;
+  background: black;
+  padding: 0 0.2em;
+  margin-bottom: 10px;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+/* line 25, scss/furgon.sass */
+header {
+  background-image: url(https://images5.alphacoders.com/431/431473.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+/* line 36, scss/furgon.sass */
+main {
+  margin-right: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 42, scss/furgon.sass */
+.cta {
+  display: inline-block;
+  background: #f8d902;
+  color: black;
+  text-decoration: none;
+  font-size: 40px;
+  text-transform: uppercase;
+  padding: 0 0.4em;
+  font-weight: 400;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+/* line 53, scss/furgon.sass */
+.cta .ion-chevron-right {
+  font-size: 0.8em;
+  margin-left: 0.3em;
+}
+
+/* line 57, scss/furgon.sass */
+.cta:hover {
+  color: #f8d902;
+  background: black;
+}
+
+/* line 61, scss/furgon.sass */
+.cta:hover ~ h1 span {
+  color: black;
+  background: #f8d902;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 66, scss/furgon.sass */
+  main {
+    margin-right: 100px;
+  }
+  /* line 68, scss/furgon.sass */
+  h1 {
+    font-size: 60px;
+  }
+  /* line 70, scss/furgon.sass */
+  .cta {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* line 74, scss/furgon.sass */
+  main {
+    margin-right: 0;
+  }
+  /* line 76, scss/furgon.sass */
+  h1 {
+    font-size: 40px;
+  }
+}
+
+/* line 83, scss/furgon.sass */
+.overlay {
+  position: absolute;
+  background: rgba(248, 217, 2, 0.95);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+/* line 97, scss/furgon.sass */
+.overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* line 101, scss/furgon.sass */
+.overlay.is-open .modal {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+/* line 105, scss/furgon.sass */
+.modal {
+  -webkit-transition: all 400ms cubic-bezier(0.25, 0.35, 0, 1.74);
+  transition: all 400ms cubic-bezier(0.25, 0.35, 0, 1.74);
+  -webkit-transform: translate(0px, -100px);
+          transform: translate(0px, -100px);
+  max-width: 600px;
+  background: white;
+  padding: 30px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+/* line 115, scss/furgon.sass */
+.modal .close-btn {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+/* line 128, scss/furgon.sass */
+.modal .close-btn:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+/* line 131, scss/furgon.sass */
+.modal .text-box {
+  max-width: 50%;
+}
+
+/* line 134, scss/furgon.sass */
+.modal .text-box .lead {
+  margin-top: 0;
+  color: black;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+/* line 141, scss/furgon.sass */
+.modal .text-box p {
+  color: #999;
+  font-size: 18px;
+}
+
+/* line 145, scss/furgon.sass */
+.modal .graphic {
+  background: url(../assets/furgoncete.jpeg) top left;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 256px;
+  height: 330px;
+}
+
+/* line 153, scss/furgon.sass */
+.modal form {
+  position: relative;
+  z-index: 2;
+  background: black;
+  padding: 20px;
+  margin: 60px -30px -30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 161, scss/furgon.sass */
+.modal form input {
+  height: 60px;
+  border: none;
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+/* line 168, scss/furgon.sass */
+.modal form input:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #f8d902 inset;
+}
+
+/* line 172, scss/furgon.sass */
+.modal form input[type="text"] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: 700;
+}
+
+/* line 176, scss/furgon.sass */
+.modal form input[type="submit"] {
+  background: #f8d902;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  /* line 184, scss/furgon.sass */
+  .modal {
+    margin: 30px;
+  }
+  /* line 187, scss/furgon.sass */
+  .modal .close-btn {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  /* line 191, scss/furgon.sass */
+  .modal {
+    max-width: 430px;
+    margin: 20px;
+  }
+  /* line 196, scss/furgon.sass */
+  .modal .text-box .lead {
+    font-size: 24px;
+  }
+  /* line 198, scss/furgon.sass */
+  .modal .text-box p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  /* line 202, scss/furgon.sass */
+  .modal {
+    max-width: 240px;
+    margin: 10px;
+  }
+  /* line 206, scss/furgon.sass */
+  .modal .graphic {
+    background: none;
+  }
+  /* line 209, scss/furgon.sass */
+  .modal .text-box {
+    max-width: 100%;
+  }
+  /* line 212, scss/furgon.sass */
+  .modal form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* line 215, scss/furgon.sass */
+  .modal form input[type="submit"] {
+    margin: 0;
+  }
+  /* line 217, scss/furgon.sass */
+  .modal form input[type="text"] {
+    margin-bottom: 5px;
+  }
+}
